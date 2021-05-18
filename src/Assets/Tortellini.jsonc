@@ -1,0 +1,33 @@
+{
+	"$schema": "./schema.jsonc",
+    "Name":"4-Cheese Tortellini Filling",
+    "Source":{"Author":"Basics With Babish", "Url":"https://www.youtube.com/watch?v=dFh7tZoGYA4"},
+    "Steps":[
+        {
+            "Action":"Combine",
+            "In":"Bowel",
+            "Ingredients":[
+                {"Qty":6, "Unit":"Oz","Name":"Ricotta"},
+                {"Qty":4, "Unit":"Oz","Name":"Mozzarella", "Modifier":"grated"},
+                {"Qty":2, "Unit":"Oz","Name":"Parmesan",   "Modifier":"grated"},
+                {"Qty":2, "Unit":"Oz","Name":"Asiago",     "Modifier":"grated"}
+            ],
+            "Notes":[""]
+        },
+        {
+            "Action":"Add",
+            "Ingredients":[
+                {"Qty":0.25,  "Unit":"Tsp",   "Name":"Oregano","Modifier":"grated"},
+                {"Qty":[2,3], "Unit":"Leaves","Name":"Basil",  "Modifier":"finely chopped"}, // qty can be a range
+                {"Qty":1,     "Unit":null,    "Name":"Egg",    "Modifier":"beaten"}, // whole article, null unit
+                {"Qty":0.25,  "Unit":"Tsp",   "Name":"Nutmeg", "Modifier":"grated"}, // we'll want to recognize fractions that can be written as mixed numbers
+                {"Qty":1,     "Unit":"tsp",   "Name":"Salt"},
+                {"Qty":1,     "Unit":"tsp",   "Name":"Pepper"}
+            ]
+        },
+        {"Action":"Mix", "Detail":"until paste"}, // recipes often express durations as "for <timeSpan> or until <condition>"
+        {"Action":"Move", "Detail":"to fridge until needed", "Modifier":"covered"}
+
+    ],
+    "Remarks":[""]
+}

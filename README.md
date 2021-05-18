@@ -1,2 +1,9 @@
-# Recipe-Framework
-json-encoded recipe authoring; markdown-generating; portion-scaling
+# Recipes
+
+encoding recipes as consistent syntax
+
+## TODO
+
+- a json-to-markdown converter
+- A json schema (could be produced by the markdown converter?)
+- More sample recipes, to develop the schema and explore the needs of the markdown converter
