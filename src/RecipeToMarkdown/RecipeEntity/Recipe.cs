@@ -1,30 +1,53 @@
+using System.Collections.Generic;
+
 namespace RecipeToMarkdown.RecipeEntity
 {
-    class Recipe
+    public class Recipe
     {
-        string Name{get;set;}
-        RecipeSource Source;
-        System.Collections.Generic.IEnumerable<object> Steps;
-        string[] Remarks;
+        [Newtonsoft.Json.JsonProperty()]
+        public string Name { get; set; }
+
+        [Newtonsoft.Json.JsonProperty()]
+        public RecipeSource Source;
+
+        [Newtonsoft.Json.JsonProperty()]
+        public IEnumerable<Step> Steps;
+        //public IEnumerable<object> Steps;
+
+        [Newtonsoft.Json.JsonProperty()]
+        public string[] Remarks;
     }
 
-    class RecipeSource{
-        string Author;
-        System.Uri Url;
+    public class RecipeSource
+    {
+        [Newtonsoft.Json.JsonProperty()]
+        public string Author;
+        [Newtonsoft.Json.JsonProperty()]
+        public System.Uri Url;
     }
 
-    class Step {
-        string Action;
+    public class Step
+    {
+        [Newtonsoft.Json.JsonProperty()]
+        public string Action;
 
+        [Newtonsoft.Json.JsonProperty()]
+        public Ingredient[] Ingredients;
+        //public IEnumerable<Ingredient> Ingredients;
     }
-    class Ingredient{
-        string Unit;
-        string Name;
-        string Modifier=null;
-        Quantity Quantity;
-    }
-    class Quantity{
-        double Min, Max;
+
+    public class Ingredient
+    {
+        [Newtonsoft.Json.JsonProperty()]
+        public string Unit;
+        [Newtonsoft.Json.JsonProperty()]
+        public string Name;
+        [Newtonsoft.Json.JsonProperty()]
+        public string Modifier = null;
+
+
+        [Newtonsoft.Json.JsonProperty("Qty")]
+        public dynamic QuantityRange;
     }
 
 }
