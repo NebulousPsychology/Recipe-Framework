@@ -15,7 +15,7 @@
             "Notes":[""]
         },
         {
-            "Action":"Add",
+            "Action":"Add",// lots of verbs are going to ultimately mean Add+Mix
             "Ingredients":[
                 {"Qty":0.25,  "Unit":"Tsp",   "Name":"Oregano","Modifier":"grated"},
                 {"Qty":[2,3], "Unit":"Leaves","Name":"Basil",  "Modifier":"finely chopped"}, // qty can be a range

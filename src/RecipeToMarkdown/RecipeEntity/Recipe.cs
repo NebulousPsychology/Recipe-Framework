@@ -11,8 +11,7 @@ namespace RecipeToMarkdown.RecipeEntity
         public RecipeSource Source;
 
         [Newtonsoft.Json.JsonProperty()]
-        public IEnumerable<Step> Steps;
-        //public IEnumerable<object> Steps;
+        public Step[] Steps;
 
         [Newtonsoft.Json.JsonProperty()]
         public string[] Remarks;
@@ -22,6 +21,7 @@ namespace RecipeToMarkdown.RecipeEntity
     {
         [Newtonsoft.Json.JsonProperty()]
         public string Author;
+
         [Newtonsoft.Json.JsonProperty()]
         public System.Uri Url;
     }
@@ -32,19 +32,25 @@ namespace RecipeToMarkdown.RecipeEntity
         public string Action;
 
         [Newtonsoft.Json.JsonProperty()]
+        public string In;
+
+        [Newtonsoft.Json.JsonProperty()]
         public Ingredient[] Ingredients;
-        //public IEnumerable<Ingredient> Ingredients;
+
+        [Newtonsoft.Json.JsonProperty()]
+        public string[] Notes;
     }
 
     public class Ingredient
     {
         [Newtonsoft.Json.JsonProperty()]
         public string Unit;
+
         [Newtonsoft.Json.JsonProperty()]
         public string Name;
+
         [Newtonsoft.Json.JsonProperty()]
         public string Modifier = null;
-
 
         [Newtonsoft.Json.JsonProperty("Qty")]
         public dynamic QuantityRange;
