@@ -9,7 +9,12 @@ namespace RecipeToMarkdown
             try
             {
                 Console.WriteLine($"Hello World! {DateTimeOffset.Now}");
-                // ...
+                using (var fs = new System.IO.StreamReader($"{Environment.CurrentDirectory}/../Assets/Tortellini.jsonc"))
+                {
+                    var c = fs.ReadToEnd();
+                    var o = Newtonsoft.Json.JsonConvert.DeserializeObject(c);
+                    System.Console.WriteLine(c);
+                }
             }
             catch (Exception sww)
             {
