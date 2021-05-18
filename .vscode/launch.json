@@ -10,7 +10,7 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/src/RecipeToMarkdown/bin/Debug/netcoreapp2.0/RecipeToMarkdown.dll",
+            "program": "${workspaceFolder}/src/RecipeToMarkdown/bin/Debug/netcoreapp5.0/RecipeToMarkdown.dll",
             "args": [],
             "cwd": "${workspaceFolder}/src/RecipeToMarkdown",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
