@@ -2,7 +2,7 @@ using System.Collections.Generic;
 
 namespace RecipeToMarkdown.RecipeEntity
 {
-    public class Recipe
+    public record Recipe
     {
         [Newtonsoft.Json.JsonProperty()]
         public string Name { get; set; }
@@ -17,7 +17,7 @@ namespace RecipeToMarkdown.RecipeEntity
         public string[] Remarks;
     }
 
-    public class RecipeSource
+    public record RecipeSource
     {
         [Newtonsoft.Json.JsonProperty()]
         public string Author;
@@ -26,7 +26,7 @@ namespace RecipeToMarkdown.RecipeEntity
         public System.Uri Url;
     }
 
-    public class Step
+    public record Step
     {
         [Newtonsoft.Json.JsonProperty()]
         public string Action;
@@ -41,8 +41,11 @@ namespace RecipeToMarkdown.RecipeEntity
         public string[] Notes;
     }
 
-    public class Ingredient
+    public record Ingredient
     {
+        [Newtonsoft.Json.JsonProperty("Qty")]
+        public dynamic Quantity;
+
         [Newtonsoft.Json.JsonProperty()]
         public string Unit;
 
@@ -51,9 +54,6 @@ namespace RecipeToMarkdown.RecipeEntity
 
         [Newtonsoft.Json.JsonProperty()]
         public string Modifier = null;
-
-        [Newtonsoft.Json.JsonProperty("Qty")]
-        public dynamic QuantityRange;
     }
 
 }
