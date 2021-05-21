@@ -41,8 +41,12 @@
 					"pattern": "^https?://.*$"
 				}
 			}
-		}
-,
+		},
+		"Servings": {
+			"$id": "#root/Servings",
+			"title": "Servings",
+			"type": ["integer","null"]
+		},
 		"Steps": {
 			"$id": "#root/Steps",
 			"title": "Steps",

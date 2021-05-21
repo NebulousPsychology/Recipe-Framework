@@ -11,6 +11,9 @@ namespace RecipeToMarkdown.RecipeEntity
         public RecipeSource Source;
 
         [Newtonsoft.Json.JsonProperty()]
+        public int? Servings;
+
+        [Newtonsoft.Json.JsonProperty()]
         public Step[] Steps;
 
         [Newtonsoft.Json.JsonProperty()]
