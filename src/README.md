@@ -28,3 +28,8 @@ Markdown generation should strive for:
 - good _mis-en-place_ instructions
 - units at point-of-use
 - 'reserve `qty` for later' is a bad instruction. when an ingredient is used in multiple places, don't group up in the ingredients list
+
+## TODO
+
+- Support step-groupings, especially which can be done without time pressure. E.g. A collection of steps for Dough + A collection for the sauce + a collection for turning both into pizza
+- Support multitasking/concurrent activity and other time management (UntilCondition/OnceCondition)
