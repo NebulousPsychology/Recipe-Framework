@@ -1,0 +1,78 @@
+{
+	"$schema": "./schema.jsonc",
+    "Name":"Tuscan Chicken",
+    // Demonstrates phase-grouping of steps
+    "Servings":2,
+    "Source":{"Author":"", "Url":"https://thatlowcarblife.com/creamy-tuscan-chicken"},
+    "Phases":[
+        {
+            "Phase":"Chicken",
+            "Steps":[
+                {
+                    "Action":"Combine",
+                    "In":"Bowel",
+                    "Ingredients":[
+                        {"Qty":0.5, "Unit":"tsp","Name":"paprika"},
+                        {"Qty":0.5, "Unit":"tsp","Name":"garlic powder"},
+                        {"Qty":0.5, "Unit":"tsp","Name":"salt"}
+                    ],
+                    "Notes":[""]
+                },
+                {
+                    "Action":"Coat", "Detail":"Both Sides",
+                    "Ingredients":[
+                        {"Qty":2, "Unit":null,"Name":"chicken breasts", "Modifier":"thin-sliced"}
+                    ]
+                },
+                {
+                    "Action":"Melt","In":"skillet","Detail":"over medium heat",
+                    "Ingredients":[ {"Qty":1, "Unit":"Tbs","Name":"Butter", "Modifier":""} ]
+                },
+                {
+                    "Action":"Cook","In":"skillet","Detail":"5mins per side until cooked through"
+                },
+                {
+                    "Action":"Move","Detail":"to plate and set aside"
+                }
+            ]
+        },
+        {
+            "Phase":"Sauce",
+            "Steps":[
+                {
+                    "Action":"Combine",
+                    "In":"saucepan",
+                    "Ingredients":[
+                        {"Qty":0.5, "Unit":"cup","Name":"Cream"},
+                        {"Qty":0.25, "Unit":"cup","Name":"dried tomatoes","Modifier":"chopped"},// a modifier typically represents a mis-en-place action
+                        {"Qty":2, "Unit":"clove","Name":"garlic","Modifier":"minced"}
+                    ]
+                },
+                {
+                    "Action":"Cook","In":"skillet","Detail":"2 minutes over low heat to thicken"
+                }
+                ,{
+                    "Action":"Add",
+                    "In":"saucepan",
+                    "Ingredients":[
+                        {"Qty":0.5, "Unit":"cup","Name":"spinach","Modifier":"chopped"}
+                    ],
+                    "Detail":"Stir well"
+                },
+                {
+                    "Action":"Cook","In":"skillet","Detail":"until spinach is wilted and sauce is thickened, about 3min"
+                    // really making the Detail field do a lot of heavy lifting
+                }
+            ]
+        },
+        {
+            "Phase":"A-la-minute", // "Return the chicken to the skillet and coat with the sauce"
+            "Steps":[
+                {"Action":"Add","In":"skillet","Detail":"the chicken, until warm"},
+                {"Action":"Coat","Detail":"with sauce"}
+            ]
+        }
+
+    ],
+    "Remarks":[""]
+}
