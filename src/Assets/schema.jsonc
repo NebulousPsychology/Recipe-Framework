@@ -1,0 +1,162 @@
+{
+	"definitions": {},
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$id": "https://example.com/object1621302516.json",
+	"title": "Root",
+	"type": "object",
+	"properties": {
+		"Name": {
+			"$id": "#root/Name",
+			"title": "Name",
+			"type": "string",
+			"default": "",
+			"examples": [
+				"4-Cheese Tortellini Filling"
+			],
+			"pattern": "^.*$"
+		},
+		"Source": {
+			"$id": "#root/Source",
+			"title": "Source",
+			"type": "object",
+			"properties": {
+				"Author": {
+					"$id": "#root/Source/Author",
+					"title": "Author",
+					"type": "string",
+					"default": "",
+					"examples": [
+						"Basics With Babish"
+					],
+					"pattern": "^.*$"
+				},
+				"Url": {
+					"$id": "#root/Source/Url",
+					"title": "Url",
+					"type": "string",
+					"default": "",
+					"examples": [
+						"https://www.youtube.com/watch?v=dFh7tZoGYA4"
+					],
+					"pattern": "^https?://.*$"
+				}
+			}
+		},
+		"Servings": {
+			"$id": "#root/Servings",
+			"title": "Servings",
+			"type": ["integer","null"]
+		},
+		"Steps": {
+			"$id": "#root/Steps",
+			"title": "Steps",
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/Steps/items",
+				"title": "Items",
+				"type": "object",
+				"properties": {
+					"Action": {
+						"$id": "#root/Steps/items/Action",
+						"title": "Action",
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Combine"
+						],
+						"pattern": "^.*$"
+					},
+					"In": {
+						"$id": "#root/Steps/items/In",
+						"title": "In",
+						"type": "string",
+						"default": "",
+						"examples": [
+							"Bowel"
+						],
+						"pattern": "^.*$"
+					},
+					"Ingredients": {
+						"$id": "#root/Steps/items/Ingredients",
+						"title": "Ingredients",
+						"type": "array",
+						"default": [],
+						"items":{
+							"$id": "#root/Steps/items/Ingredients/items",
+							"title": "Items",
+							"type": "object",
+							"properties": {
+								"Qty": {
+									"$id": "#root/Steps/items/Ingredients/items/Qty",
+									"title": "Qty",
+									"type": ["number","array"],
+									"examples": [
+										6, [1,2]
+									],
+                                    "items":{ "type":"number"},
+									"default": 0,
+                                    "maxItems": 2
+								},
+								"Unit": {
+									"$id": "#root/Steps/items/Ingredients/items/Unit",
+									"title": "Unit",
+									"type": ["null","string"],
+									"default": "",
+									"examples": [
+										"Oz"
+									],
+									"pattern": "^.*$"
+								},
+								"Name": {
+									"$id": "#root/Steps/items/Ingredients/items/Name",
+									"title": "Name",
+									"type": "string",
+									"default": "",
+									"examples": [
+										"Ricotta"
+									],
+									"pattern": "^.*$"
+								}
+							}
+						}
+
+					},
+					"Notes": {
+						"$id": "#root/Steps/items/Notes",
+						"title": "Notes",
+						"type": "array",
+						"default": [],
+						"items":{
+							"$id": "#root/Steps/items/Notes/items",
+							"title": "Items",
+							"type": "string",
+							"default": "",
+							"examples": [
+								""
+							],
+							"pattern": "^.*$"
+						}
+					}
+				}
+			}
+
+		},
+		"Remarks": {
+			"$id": "#root/Remarks",
+			"title": "Remarks",
+			"type": "array",
+			"default": [],
+			"items":{
+				"$id": "#root/Remarks/items",
+				"title": "Items",
+				"type": "string",
+				"default": "",
+				"examples": [
+					""
+				],
+				"pattern": "^.*$"
+			}
+		}
+	}
+}
