@@ -22,3 +22,9 @@ indent_style = space
 
 [*.tsv]
 indent_style = tab
+
+[*.json]
+insert_final_newline = true
+
+[*.cs]
+insert_final_newline = true
