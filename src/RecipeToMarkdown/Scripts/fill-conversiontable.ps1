@@ -29,6 +29,7 @@ foreach($cvrow in $after){
             $cvrow."$tounit" = [double][math]::Round($inverse, 7)
         }else {
             Write-Debug "$fromunit > $toUnit = $($cvrow."$toUnit")"
+            $cvrow."$tounit"=[double]$cvrow."$tounit"
         }
     }
 }
